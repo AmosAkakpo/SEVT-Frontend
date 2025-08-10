@@ -1,0 +1,46 @@
+.zone-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.zone-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.zone-column {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.active-zone {
+  background-color: #e7f9ec;
+  border-left: 6px solid #2ecc71;
+}
+
+.inactive-zone {
+  background-color: #fdecea;
+  border-left: 6px solid #e74c3c;
+}
+
+.zone-column h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.zone-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.zone-column li {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}

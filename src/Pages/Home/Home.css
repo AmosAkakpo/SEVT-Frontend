@@ -1,0 +1,46 @@
+.home-wrapper{
+    margin: 30px 10% 50px 10%;
+}
+
+.home-content-1{
+    margin-top: 50px;
+}
+
+.verse{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.verse-text{
+    font-weight: bold;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.home-branch-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.home-branch-table th,
+.home-branch-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.home-branch-table thead {
+  background-color: #101111; /* You can change this header color if you want */
+  color: white;
+}
+
+.home-branch-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
+
+.home-branch-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* light grey */
+}

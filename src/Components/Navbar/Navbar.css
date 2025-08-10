@@ -1,0 +1,43 @@
+.nav-wrapper{
+    padding: 30px 25px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid black 2px;
+}
+
+.nav-branding{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-logo-name{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.nav-logo-image{
+
+}
+.nav-menu{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nav-menu-item{
+    text-decoration: none;
+    color: rgb(43, 44, 46);
+    font-size: larger;
+}
+
+.nav-active{
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(40, 40, 145);
+}
+

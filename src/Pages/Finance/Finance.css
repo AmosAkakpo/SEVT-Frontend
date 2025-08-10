@@ -1,0 +1,51 @@
+.finance-wrapper{
+    margin: 30px 10% 50px 10%;
+    max-height: 600px;
+    overflow-y: auto;
+    border-bottom: solid 2px black;
+}
+
+.finance-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.finance-table th,
+.finance-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.finance-table thead {
+  background-color: #101111; /* You can change this header color if you want */
+  color: white;
+}
+
+.finance-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
+
+.finance-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* light grey */
+}
+
+
+.finance-download-button{
+  background: black;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+
+  font-size: medium;
+
+  margin-left: 10px;
+}
+
+.finance-download-button:hover{
+  background: white;
+  color: black;
+}

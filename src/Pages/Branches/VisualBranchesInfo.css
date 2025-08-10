@@ -1,0 +1,33 @@
+.branch-branch-table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.branch-branch-table th,
+.branch-branch-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.branch-branch-table thead {
+  background-color: #101111; /* You can change this header color if you want */
+  color: white;
+}
+
+.branch-branch-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
+
+.branch-branch-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* light grey */
+}
+
+.branch-arrangement{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
