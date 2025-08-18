@@ -1,0 +1,30 @@
+.nz-wrapper {
+  margin: 30px 10% 50px 10%;
+}
+
+.nz-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.nz-table th, 
+.nz-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.nz-table th {
+  background-color: #f2f2f2;
+}
+
+.nz-section {
+  margin-top: 20px;
+}
+
+.nz-section form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

@@ -1,0 +1,48 @@
+.ns-wrapper {
+  margin: 30px 10% 50px 10%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ns-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.ns-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ns-input {
+  padding: 10px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.ns-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52,152,219,0.4);
+}
+
+.ns-btn {
+  background: #3498db;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ns-btn:hover {
+  background: #2980b9;
+}

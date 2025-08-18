@@ -10,7 +10,8 @@ const Navbar = () => {
   const menuItems = [
     {name:"Acceuil",path:'/'},
     {name: "Nos Branches", path:'/Branches'},
-    {name:"Finance",path:'/Finance'}
+    {name:"Finance",path:'/Finance'},
+    {name:"Se Connecter", path:'/Login'}
   ];
 
   useEffect(()=>{

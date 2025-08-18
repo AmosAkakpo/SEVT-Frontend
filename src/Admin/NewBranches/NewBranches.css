@@ -1,0 +1,95 @@
+/* Wrapper */
+.nb-wrapper {
+  margin: 30px 10% 50px 10%;
+}
+
+/* Section container */
+.nb-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Section title */
+.nb-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Table */
+.nb-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.nb-table th,
+.nb-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.nb-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.nb-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Form */
+.nb-form {
+  margin-bottom: 25px;
+}
+
+.nb-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.nb-form input,
+.nb-form select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.nb-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nb-btn-add {
+  background-color: #4caf50;
+  color: white;
+}
+
+.nb-btn-add:hover {
+  background-color: #43a047;
+}
+
+.nb-btn-delete {
+  background-color: #e53935;
+  color: white;
+}
+
+.nb-btn-delete:hover {
+  background-color: #d32f2f;
+}

@@ -1,54 +1,43 @@
-import React, { useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom';
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-import './Login.css'
 const Login = () => {
-    const [values,setvalues] = useState({
-        username:'',
-        userpwd:''
-    })
+  const [values, setValues] = useState({ username: '', userpwd: '' });
+  const navigate = useNavigate();
 
-    const handlechanges=(e)=>{
-        setvalues({...values,[e.target.name]:e.target.value})
-    }
+  const handleChanges = (e) => setValues({ ...values, [e.target.name]: e.target.value });
 
-    const handlesubmit =(e)=>{
-        e.preventDefault()
-        axios.post('',values)
-        .then(result=>console.log(result))
-        .catch(err=>console.log(err))
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    // Check login using the backend
+    const res = await axios.post('https://sevt-backend.onrender.com/users/login', values);
+
+    if (res.status === 200) {
+      localStorage.setItem('isAdmin', true);       
+      localStorage.setItem('loginTime', Date.now()); 
+      navigate('/NewBranches'); 
     }
+  } catch (err) {
+    console.error(err);
+    alert('Nom d’utilisateur ou mot de passe incorrect');
+  }
+};
+
   return (
     <div className='login_container'>
-        <div className='login_wrapper'>
-            <form action="" onSubmit={handlesubmit} >
-                <div className='login_title'>
-                    Se Connecter
-                </div>
-
-                <div className='login_inputbox'>
-                    <input type="text" placeholder="Nom D'utilizateur" required name='username' onChange={handlechanges}/>
-                    <i className="bx  bx-user"></i> 
-                </div>
-
-                <div className='login_inputbox'>
-                    <input type="text" placeholder="Mot De Passe" required name='userpwd' onChange={handlechanges}/>
-                    <i className='bx  bx-lock-open'></i> 
-                </div>
-
-
-                <button className='login_submit'>Soumettre</button>
-
-                <div className='login_gotologin'>
-                    <NavLink to={"/Register"}>
-                        Creer Un Compte 
-                    </NavLink>
-                </div>
-            </form>
-        </div>
+      <div className='login_wrapper'>
+        <form onSubmit={handleSubmit}>
+          <div className='login_title'>Se Connecter</div>
+          <input type="text" name="username" placeholder="Nom d'utilisateur" required onChange={handleChanges} />
+          <input type="password" name="userpwd" placeholder="Mot de passe" required onChange={handleChanges} />
+          <button type="submit">Soumettre</button>
+        </form>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
