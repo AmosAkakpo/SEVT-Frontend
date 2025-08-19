@@ -29,7 +29,11 @@ function App() {
     <>
       
       <Routes>
+
+
+       
         <Route element={<Login/>} path='/Login'/>
+        <Route element={<Register/>} path='/Register'/> 
         
         <Route element={<PublicLayout/>}>
           <Route element={<Home/>} path='/'/>

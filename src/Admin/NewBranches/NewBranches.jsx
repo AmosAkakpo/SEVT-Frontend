@@ -8,10 +8,11 @@ function NewBranches() {
   const [newBranch, setNewBranch] = useState({
     branchName: "",
     branchMainPastor: "",
+    branchmptelephone: "",   // <-- NEW
     branchLocation: "",
     branchType: "",
     branchCreationDate: "",
-    zoneId: ""
+    zoneId: "",
   });
 
   const [deleteBranchId, setDeleteBranchId] = useState("");
@@ -109,6 +110,7 @@ function NewBranches() {
             <tr>
               <th>Nom</th>
               <th>Pasteur Principal</th>
+              <th>Téléphone du Pasteur</th> {/* <-- NEW */}
               <th>Localisation</th>
               <th>Type</th>
               <th>Date de Création</th>
@@ -119,6 +121,7 @@ function NewBranches() {
               <tr key={branch._id}>
                 <td>{branch.branchName}</td>
                 <td>{branch.branchMainPastor}</td>
+                <td>{branch.branchmptelephone}</td> {/* <-- NEW */}
                 <td>{branch.branchLocation}</td>
                 <td>{branch.branchType}</td>
                 <td>{branch.branchCreationDate}</td>
@@ -143,6 +146,8 @@ function NewBranches() {
           <input type="text" onChange={(e) => setNewBranch({ ...newBranch, branchName: e.target.value })} required />
           <label>Pasteur principal</label>
           <input type="text" onChange={(e) => setNewBranch({ ...newBranch, branchMainPastor: e.target.value })} required />
+          <label>Téléphone du pasteur</label> {/* <-- NEW */}
+          <input type="text" onChange={(e) => setNewBranch({ ...newBranch, branchmptelephone: e.target.value })} required />
           <label>Localisation</label>
           <input type="text" onChange={(e) => setNewBranch({ ...newBranch, branchLocation: e.target.value })} required />
           <label>Type</label>
@@ -183,6 +188,7 @@ function NewBranches() {
           <select onChange={(e) => setUpdateField(e.target.value)} required>
             <option value="branchName">Nom de la branche</option>
             <option value="branchMainPastor">Pasteur principal</option>
+            <option value="branchmptelephone">Téléphone du Pasteur</option> {/* <-- NEW */}
           </select>
           <label>Nouvelle valeur</label>
           <input type="text" onChange={(e) => setUpdateValue(e.target.value)} required />
