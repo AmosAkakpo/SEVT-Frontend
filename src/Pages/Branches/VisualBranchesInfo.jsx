@@ -5,33 +5,35 @@ function VisualBranchesInfo({ zone }) {
   const [branchData, setBranchData] = useState([]);
   const [servicesByBranch, setServicesByBranch] = useState({}); // { branchName: [services] }
 
-  useEffect(() => {
-    setBranchData([]);
+useEffect(() => {
+  setBranchData([]);
 
-    async function getBranchData() {
-      try {
-        const response = await axios.get("https://sevt-backend.onrender.com/branches");
+  async function getBranchData() {
+    try {
+      const response = await axios.get("https://sevt-backend.onrender.com/branches");
 
-        if (response.status === 200 && Array.isArray(response.data)) {
-          const branchNames = Array.isArray(zone.branchList)
-            ? zone.branchList
-            : zone.branchList?.split(",").map((b) => b.trim());
+      if (response.status === 200 && Array.isArray(response.data)) {
+        // Map branch IDs from zone.branchList
+        const branchIds = Array.isArray(zone.branchList)
+          ? zone.branchList
+          : zone.branchList?.split(",").map((b) => b.trim());
 
-          const filtered = response.data.filter((branch) =>
-            branchNames?.includes(branch.branchName)
-          );
+        const filtered = response.data.filter((branch) =>
+          branchIds.includes(branch._id) // compare with _id, not branchName
+        );
 
-          setBranchData(filtered);
-        }
-      } catch (error) {
-        console.error("Error fetching branches:", error);
+        setBranchData(filtered);
       }
+    } catch (error) {
+      console.error("Erreur en collectant les branches:", error);
     }
+  }
 
-    if (zone && zone.branchList?.length > 0) {
-      getBranchData();
-    }
-  }, [zone]);
+  if (zone && zone.branchList?.length > 0) {
+    getBranchData();
+  }
+}, [zone]);
+
 
   useEffect(() => {
     async function fetchServices(branchName) {
